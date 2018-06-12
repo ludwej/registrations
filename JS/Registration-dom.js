@@ -4,8 +4,9 @@ var Output = document.querySelector('ul')
 var ClearBTN = document.querySelector('.ClearBTN')
 // var Town = document.querySelector('.Town')
 //
-var storing = localStorage.getItem('regNumbers') ? JSON.parse(localStorage.getItem('regNumbers')) : {} ;
-console.log(storing);
+var storing = localStorage.getItem('regNumber') ? JSON.parse(localStorage.getItem('regNumber')) : {} ;
+console.log(localStorage.getItem('regNumber'));
+console.log(regNumber);
 // var storedLocal = storage ? JSON.parse(storage) : {};
 
 
@@ -23,7 +24,7 @@ function dom() {
   factoryF.regNum(textedEntered)
   list(textedEntered)
 
-localStorage.setItem('regNumbers', JSON.stringify(factoryF.getMap()))
+localStorage.setItem('regNumber', JSON.stringify(factoryF.getMap()))
 }
 
 
