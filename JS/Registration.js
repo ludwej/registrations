@@ -1,19 +1,33 @@
-function regNumbers() {
+function registration(reg) {
 
 
+var regNumber = reg || {} ;
+var regNo = '' ;
 
-var town = ['Cape Town' , 'Paarl' , 'George', 'Stellenbosch' ]
 
-
-function displayEachRegNumber (list)
-{
-
-  var newList = list
-  for (var i=0 ; i<list.length;i++)
- console.log(newList[i])
-
- if regNo[i] startsWith('CA')
+function regNum(regN) {
+// for (var i = 0 ; i < regN.length; i++ )
+if (regNum[regNumber]=== undefined &
+    regN.startsWith('CA') || regN.startsWith('CL') ||regN.startsWith('CJ') ||
+    regN.startsWith('CK') ){
+        regNumber[regN] =0;
+        return true;
 }
-  return Cape Town
+    return false;
+  }
 
+  function getMap() {
+    regNumber
+  }
+
+
+  function storage(){
+    return  Object.keys(regNumber);
+  }
+
+return{
+  regNum,
+  getMap,
+  storage
+}
 }
