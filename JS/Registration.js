@@ -1,4 +1,4 @@
-function registration(reg) {
+function Registration(reg) {
 
 
 var regNumber = reg || {} ;
@@ -6,28 +6,47 @@ var regNo = '' ;
 
 
 function regNum(regN) {
-// for (var i = 0 ; i < regN.length; i++ )
-if (regNum[regNumber]=== undefined &
-    regN.startsWith('CA') || regN.startsWith('CL') ||regN.startsWith('CJ') ||
-    regN.startsWith('CK') ){
-        regNumber[regN] =0;
-        return true;
+
+
+  if (regNumber[regN] === undefined  && 
+  regNumber[regN].startsWith('CY')||
+  regNumber[regN].startsWith('CK')||
+  regNumber[regN].startsWith('CJ')) {
+
+regNumber[regN] =0;
+    return true;
+  }
+  return false;
 }
-    return false;
+
+
+  function getRegNo() {
+    return regNo ;
   }
 
   function getMap() {
-    regNumber
+    regNumber;
   }
 
+  function filter(value) {
+    var startsW=[];
+    var keys = Object.keys(regNumber);
 
-  function storage(){
-    return  Object.keys(regNumber);
+    if (value != '') {
+      for (var i = 0; i < keys.length; i++) {
+        if (keys[i].startsWith(value)) {
+
+          startsW.push(keys[i]);
   }
+}
+ return startsW;
+}
+}
+
 
 return{
   regNum,
   getMap,
-  storage
+  filter
 }
 }

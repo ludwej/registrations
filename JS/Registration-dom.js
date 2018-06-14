@@ -2,15 +2,19 @@ var input = document.querySelector('.Input')
 var AddBTN = document.querySelector('.AddBTN')
 var Output = document.querySelector('ul')
 var ClearBTN = document.querySelector('.ClearBTN')
+var Towns = document.querySelector('.Location')
+
 // var Town = document.querySelector('.Town')
-//
-var storing = localStorage.getItem('regNumber') ? JSON.parse(localStorage.getItem('regNumber')) : {} ;
-console.log(localStorage.getItem('regNumber'));
-console.log(regNumber);
+
+var storing = localStorage.getItem('regNumber') ? JSON.parse(localStorage.getItem('regNumber')) : {};
+// var localstoring=storing;
+// \ console.log(localStorage.getItem('regNumber'));
+// console.log(regNumber);
 // var storedLocal = storage ? JSON.parse(storage) : {};
 
 
-var factoryF = registration(storing);
+var factoryF = Registration();
+
 function list(regNo) {
   var newList = document.createElement("ul");
   newList.textContent = regNo ;
@@ -25,8 +29,18 @@ function dom() {
   list(textedEntered)
 
 localStorage.setItem('regNumber', JSON.stringify(factoryF.getMap()))
+// console.log(factoryF.getMap());
 }
 
+
+function filterTowns(locations) {
+    var optionValue =   Towns.value ;
+    var getFilter = factoryF.filter(optionValue) ;
+    for (var i = 0; i < getFilter.length; i++) {
+      getFilter[i]
+    }
+      return getFilter ;
+}
 
 AddBTN.addEventListener('click' ,dom)
 
