@@ -6,7 +6,7 @@ var Towns = document.querySelector('.Location')
 
 // var Town = document.querySelector('.Town')
 
-var storing = localStorage.getItem('regNumber') ? JSON.parse(localStorage.getItem('regNumber')) : {};
+// var storing = localStorage.getItem('regNumber') ? JSON.parse(localStorage.getItem('regNumber')) : {};
 // var localstoring=storing;
 // \ console.log(localStorage.getItem('regNumber'));
 // console.log(regNumber);
@@ -41,8 +41,8 @@ function filterTowns(locations) {
     }
       return getFilter ;
 }
+AddBTN.addEventListener("click", dom);
 
-AddBTN.addEventListener('click' ,dom)
 
 
 //

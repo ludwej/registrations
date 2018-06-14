@@ -1,21 +1,25 @@
-.body{
+body{
 
-  width: auto;
-  height: auto;
+
+  background-image: url('image.jpeg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; 
 
 }
 
 .container{
-    background-color: blue ;
+
     padding: 50px;
     align-content: center;
-    a
 
 
 }
 
 
 .town{
-    
+
 
 }

@@ -8,7 +8,7 @@ var regNo = '' ;
 function regNum(regN) {
 
 
-  if (regNumber[regN] === undefined  && 
+  if (regNumber[regN] === undefined  &&
   regNumber[regN].startsWith('CY')||
   regNumber[regN].startsWith('CK')||
   regNumber[regN].startsWith('CJ')) {
